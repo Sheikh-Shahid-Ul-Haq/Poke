@@ -17,9 +17,11 @@ const EvolutionComponent = ({ values, setOpen }) => {
       </button>
 
       <div style={{ display: "flex" }}>
-        {values.map((item, index) => (
+        {values?values.map((item, index) => (
           <EvolutionItem values={item} />
-        ))}
+        )):
+        <div>No Evolution</div>
+        }
       </div>
     </div>
   );
